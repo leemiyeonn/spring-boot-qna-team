@@ -28,6 +28,10 @@ public class Member { // Member 엔티티 클래스
     @Column(nullable = false)
     private String password; // 비밀번호
 
+    @Enumerated(value = EnumType.STRING)
+    @Column(nullable = false)
+    private Role role = Role.MEMBER;
+
     @OneToMany(mappedBy = "member") // Question - Member 다대일 양방향 매핑
     private List<Question> questions = new ArrayList<>();
 
