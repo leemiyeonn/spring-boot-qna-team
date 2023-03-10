@@ -3,14 +3,9 @@ package com.codestates.exception;
 import lombok.Getter;
 
 public enum ExceptionCode {
-    MEMBER_NOT_FOUND(404, "Member not found"),
-    MEMBER_EXISTS(409, "Member exists"),
-    COFFEE_NOT_FOUND(404, "Coffee not found"),
-    COFFEE_CODE_EXISTS(409, "Coffee Code exists"),
-    ORDER_NOT_FOUND(404, "Order not found"),
-    CANNOT_CHANGE_ORDER(403, "Order can not change"),
-    NOT_IMPLEMENTATION(501, "Not Implementation"),
-    INVALID_MEMBER_STATUS(400, "Invalid member status");
+    MEMBER_NOT_FOUND(404,"MEMBER NOT FOUND"),
+    MEMBER_EXISTS(404,"MEMBER EXISTS"),
+    CANNOT_REGISTRATION_QUESTION(404, "MANAGER CANNOT REGISTRATION QUESTION");
 
     @Getter
     private int status;
@@ -18,8 +13,8 @@ public enum ExceptionCode {
     @Getter
     private String message;
 
-    ExceptionCode(int code, String message) {
-        this.status = code;
+    ExceptionCode(int status, String message) {
+        this.status = status;
         this.message = message;
     }
 }
