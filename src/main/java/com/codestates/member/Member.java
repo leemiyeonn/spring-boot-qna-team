@@ -38,6 +38,12 @@ public class Member { // Member 엔티티 클래스
     @OneToMany(mappedBy = "member") // Answer - Member 다대일 양방향 매핑
     private List<Answer> answers = new ArrayList<>();
 
+    public Member(String email, String nickname, String password) {
+        this.email = email;
+        this.nickname = nickname;
+        this.password = password;
+    }
+
     public enum Role{
         MEMBER("일반 회원"),
         MANAGER("관리자");
