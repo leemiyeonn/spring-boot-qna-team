@@ -1,6 +1,5 @@
-package com.codestates.member.repository;
+package com.codestates.member;
 
-import com.codestates.member.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
